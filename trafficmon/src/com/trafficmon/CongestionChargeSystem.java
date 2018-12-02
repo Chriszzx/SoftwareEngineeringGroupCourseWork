@@ -7,7 +7,7 @@ public class CongestionChargeSystem {
 
     public static final BigDecimal CHARGE_RATE_POUNDS_PER_MINUTE = new BigDecimal(0.05);
 
-    private final List<ZoneBoundaryCrossing> eventLog = new ArrayList<ZoneBoundaryCrossing>();
+    protected final List<ZoneBoundaryCrossing> eventLog = new ArrayList<ZoneBoundaryCrossing>();
 
     public void vehicleEnteringZone(Vehicle vehicle) {
         eventLog.add(new EntryEvent(vehicle));
@@ -40,7 +40,6 @@ public class CongestionChargeSystem {
             } else {
 
                 BigDecimal charge = calculateChargeForTimeInZone(crossings);
-
                 try {
                     RegisteredCustomerAccountsService.getInstance().accountFor(vehicle).deduct(charge);
                 } catch (InsufficientCreditException ice) {
@@ -52,7 +51,7 @@ public class CongestionChargeSystem {
         }
     }
 
-    private BigDecimal calculateChargeForTimeInZone(List<ZoneBoundaryCrossing> crossings) {
+    protected BigDecimal calculateChargeForTimeInZone(List<ZoneBoundaryCrossing> crossings) {
 
         BigDecimal charge = new BigDecimal(0);
 
@@ -72,7 +71,7 @@ public class CongestionChargeSystem {
         return charge;
     }
 
-    private boolean previouslyRegistered(Vehicle vehicle) {
+    protected boolean previouslyRegistered(Vehicle vehicle) {
         for (ZoneBoundaryCrossing crossing : eventLog) {
             if (crossing.getVehicle().equals(vehicle)) {
                 return true;
@@ -81,7 +80,7 @@ public class CongestionChargeSystem {
         return false;
     }
 
-    private boolean checkOrderingOf(List<ZoneBoundaryCrossing> crossings) {
+    protected boolean checkOrderingOf(List<ZoneBoundaryCrossing> crossings) {
 
         ZoneBoundaryCrossing lastEvent = crossings.get(0);
 
@@ -101,7 +100,7 @@ public class CongestionChargeSystem {
         return true;
     }
 
-    private int minutesBetween(long startTimeMs, long endTimeMs) {
+    protected int minutesBetween(long startTimeMs, long endTimeMs) {
         return (int) Math.ceil((endTimeMs - startTimeMs) / (1000.0 * 60.0));
     }
 
