@@ -40,7 +40,7 @@ public class CongestionChargeSystem {
             if (!checkOrderingOf(crossings)) {
                 OperationsTeam.getInstance().triggerInvestigationInto(vehicle);
             } else {
-                BigDecimal charge = new BigDecimal(calculateChargeForTimeInZone(crossings));
+                BigDecimal charge = new BigDecimal(totalcharge(crossings));
                 try {
                     RegisteredCustomerAccountsService.getInstance().accountFor(vehicle).deduct(charge);
                 } catch (InsufficientCreditException ice) {
@@ -52,6 +52,21 @@ public class CongestionChargeSystem {
         }
     }
 
+    public int totalcharge(List<ZoneBoundaryCrossing> crossings){
+        ZoneBoundaryCrossing lastEvent = crossings.get(0);
+        int totaltime = totaltimeinzone(crossings);
+        if (totaltime > 240) {
+            return 12;
+        }
+        else {
+            lastEvent = crossings.get(0);
+            if (lastEvent.timestamp() < 840) {
+                return 4;
+            }
+            else
+                return 6;
+        }
+    }
 
 
     public boolean previouslyRegistered(Vehicle vehicle) {
@@ -71,12 +86,13 @@ public class CongestionChargeSystem {
         for (ZoneBoundaryCrossing crossing : crossings.subList(1, crossings.size())) {
 
             if (crossing instanceof ExitEvent) {
-                totaltime += minutesBetween(lastEvent.timestamp(), crossing.timestamp());
+                totaltime = totaltime+minutesBetween(lastEvent.timestamp(), crossing.timestamp());
             }
 
             lastEvent = crossing;
         }
         return totaltime;
+
     }
 
 
