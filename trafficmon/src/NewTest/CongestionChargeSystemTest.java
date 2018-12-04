@@ -5,12 +5,8 @@ import com.trafficmon.ExitEvent;
 import com.trafficmon.EntryEvent;
 import com.trafficmon.Vehicle;
 import com.trafficmon.ZoneBoundaryCrossing;
-import org.jmock.Expectations;
 import org.junit.Test;
 
-import org.jmock.Expectations;
-import org.jmock.integration.junit4.JUnitRuleMockery;
-import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
@@ -67,26 +63,4 @@ public class CongestionChargeSystemTest {
         assertTrue(system.crossingsByVehicle.get(vehicle1).get(0) instanceof EntryEvent);
         assertTrue(system.crossingsByVehicle.get(vehicle1).get(1) instanceof ExitEvent);
     }
-
-
-
-    private static void delayMinutes(int mins) throws InterruptedException {
-        try {
-            delaySeconds(mins * 60);
-        }
-        catch (InterruptedException e)
-        {
-            System.out.print("Error!");
-        }
-    }
-    private static void delaySeconds(int secs) throws InterruptedException {
-        try {
-            Thread.sleep(secs*1000);
-        }
-        catch (InterruptedException e)
-        {
-            System.out.print("Error!");
-        }
-    }
-
 }
