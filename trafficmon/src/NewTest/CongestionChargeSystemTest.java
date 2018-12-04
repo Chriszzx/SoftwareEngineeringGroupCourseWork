@@ -57,6 +57,17 @@ public class CongestionChargeSystemTest {
     }
     
     @Test
+    public void checkOrderingOfTest() throws InterruptedException {
+        CongestionChargeSystem system = new CongestionChargeSystem();
+        system.vehicleEnteringZone(vehicle1);
+        TimeUnit.SECONDS.sleep(2);
+        system.vehicleLeavingZone(vehicle1);
+        system.calculateCharges();
+        assertThat(system.checkOrderingOf(system.crossingsByVehicle.get(vehicle1)), is(true));
+    }
+
+    
+    @Test
     public void MapTest()
     {
         CongestionChargeSystem system = new CongestionChargeSystem();
