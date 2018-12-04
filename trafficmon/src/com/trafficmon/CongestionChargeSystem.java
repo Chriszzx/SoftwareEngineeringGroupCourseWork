@@ -2,14 +2,15 @@ package com.trafficmon;
 
 import org.joda.time.Hours;
 
+//import java.math.BigDecimal;
 import java.math.BigDecimal;
 import java.util.*;
 
 public class CongestionChargeSystem {
     public Map<Vehicle, List<ZoneBoundaryCrossing>> crossingsByVehicle = new HashMap<Vehicle, List<ZoneBoundaryCrossing>>();
 
-    int twoPM=14*60;
-    public static final BigDecimal CHARGE_RATE_POUNDS_PER_MINUTE = new BigDecimal(0.05);
+    final int twoPM=14*60;
+    final int fourhours=4*60;
 
     public final List<ZoneBoundaryCrossing> eventLog = new ArrayList<ZoneBoundaryCrossing>();
 
@@ -39,8 +40,7 @@ public class CongestionChargeSystem {
             if (!checkOrderingOf(crossings)) {
                 OperationsTeam.getInstance().triggerInvestigationInto(vehicle);
             } else {
-
-                BigDecimal charge = calculateChargeForTimeInZone(crossings);
+                BigDecimal charge = new BigDecimal(calculateChargeForTimeInZone(crossings));
                 try {
                     RegisteredCustomerAccountsService.getInstance().accountFor(vehicle).deduct(charge);
                 } catch (InsufficientCreditException ice) {
@@ -52,20 +52,7 @@ public class CongestionChargeSystem {
         }
     }
 
-    public BigDecimal calculateChargeForTimeInZone(List<ZoneBoundaryCrossing> crossings) {
 
-        BigDecimal charge = new BigDecimal(0);
-
-        ZoneBoundaryCrossing lastEvent = crossings.get(0);
-
-        if(totaltimeinzone(crossings)>4*60)
-        if(lastEvent.timestamp()<twoPM)
-        {
-
-        }
-
-        return charge;
-    }
 
     public boolean previouslyRegistered(Vehicle vehicle) {
         for (ZoneBoundaryCrossing crossing : eventLog) {
@@ -78,13 +65,13 @@ public class CongestionChargeSystem {
 
     public int totaltimeinzone(List<ZoneBoundaryCrossing> crossings)
     {
-        int totaltime = 0;
+        int totaltime =0;
         ZoneBoundaryCrossing lastEvent = crossings.get(0);
 
         for (ZoneBoundaryCrossing crossing : crossings.subList(1, crossings.size())) {
 
             if (crossing instanceof ExitEvent) {
-                totaltime = totaltime+minutesBetween(lastEvent.timestamp(), crossing.timestamp());
+                totaltime += minutesBetween(lastEvent.timestamp(), crossing.timestamp());
             }
 
             lastEvent = crossing;
