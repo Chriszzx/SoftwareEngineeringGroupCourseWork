@@ -6,15 +6,15 @@ import java.util.List;
 
 public class CongestionChargeFunctions {
 
-    public static final BigDecimal CHARGE_RATE_POUNDS_PER_MINUTE = new BigDecimal(0.05);
+    private static final BigDecimal CHARGE_RATE_POUNDS_PER_MINUTE = new BigDecimal(0.05);
 
-    public final List<ZoneBoundaryCrossing> eventLog = new ArrayList<ZoneBoundaryCrossing>();
+    static final List<ZoneBoundaryCrossing> eventLog = new ArrayList<ZoneBoundaryCrossing>();
 
-    public int minutesBetween(long startTimeMs, long endTimeMs) {
+    int minutesBetween(long startTimeMs, long endTimeMs) {
         return (int) Math.ceil((endTimeMs - startTimeMs) / (1000.0 * 60.0));
     }
 
-    public boolean previouslyRegistered(Vehicle vehicle) {
+    boolean previouslyRegistered(Vehicle vehicle) {
         for (ZoneBoundaryCrossing crossing : eventLog) {
             if (crossing.getVehicle().equals(vehicle)) {
                 return true;
@@ -23,7 +23,7 @@ public class CongestionChargeFunctions {
         return false;
     }
 
-    public boolean checkOrderingOf(List<ZoneBoundaryCrossing> crossings) {
+    boolean checkOrderingOf(List<ZoneBoundaryCrossing> crossings) {
 
         ZoneBoundaryCrossing lastEvent = crossings.get(0);
 
@@ -43,7 +43,7 @@ public class CongestionChargeFunctions {
         return true;
     }
 
-    public BigDecimal calculateChargeForTimeInZone(List<ZoneBoundaryCrossing> crossings) {
+    BigDecimal calculateChargeForTimeInZone(List<ZoneBoundaryCrossing> crossings) {
 
         BigDecimal charge = new BigDecimal(0);
 

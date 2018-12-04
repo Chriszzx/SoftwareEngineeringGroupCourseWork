@@ -1,6 +1,6 @@
 package com.trafficmon;
 
-public abstract class ZoneBoundaryCrossing {
+public class ZoneBoundaryCrossing {
 
     private final Vehicle vehicle;
     private final long time;

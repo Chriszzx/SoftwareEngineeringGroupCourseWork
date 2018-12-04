@@ -5,24 +5,23 @@ import java.util.*;
 
 public class CongestionChargeSystem {
 
-    CongestionChargeFunctions functions = new CongestionChargeFunctions();
+    private CongestionChargeFunctions functions = new CongestionChargeFunctions();
+    Map<Vehicle, List<ZoneBoundaryCrossing>> crossingsByVehicle = new HashMap<Vehicle, List<ZoneBoundaryCrossing>>();
 
     public void vehicleEnteringZone(Vehicle vehicle) {
-        functions.eventLog.add(new EntryEvent(vehicle));
+        CongestionChargeFunctions.eventLog.add(new EntryEvent(vehicle));
     }
 
     public void vehicleLeavingZone(Vehicle vehicle) {
         if (!functions.previouslyRegistered(vehicle)) {
             return;
         }
-        functions.eventLog.add(new ExitEvent(vehicle));
+        CongestionChargeFunctions.eventLog.add(new ExitEvent(vehicle));
     }
 
     public void calculateCharges() {
 
-        Map<Vehicle, List<ZoneBoundaryCrossing>> crossingsByVehicle = new HashMap<Vehicle, List<ZoneBoundaryCrossing>>();
-
-        for (ZoneBoundaryCrossing crossing : functions.eventLog) {
+        for (ZoneBoundaryCrossing crossing : CongestionChargeFunctions.eventLog) {
             if (!crossingsByVehicle.containsKey(crossing.getVehicle())) {
                 crossingsByVehicle.put(crossing.getVehicle(), new ArrayList<ZoneBoundaryCrossing>());
             }
@@ -41,9 +40,7 @@ public class CongestionChargeSystem {
 
                 try {
                     RegisteredCustomerAccountsService.getInstance().accountFor(vehicle).deduct(charge);
-                } catch (InsufficientCreditException ice) {
-                    OperationsTeam.getInstance().issuePenaltyNotice(vehicle, charge);
-                } catch (AccountNotRegisteredException e) {
+                } catch (InsufficientCreditException | AccountNotRegisteredException ice) {
                     OperationsTeam.getInstance().issuePenaltyNotice(vehicle, charge);
                 }
             }
