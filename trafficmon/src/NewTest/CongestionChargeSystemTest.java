@@ -55,5 +55,24 @@ public class CongestionChargeSystemTest {
         assertTrue(system.previouslyRegistered(vehicle1));
         assertFalse(system.previouslyRegistered(vehicle2));
     }
+    
+    @Test
+    public void MapTest()
+    {
+        CongestionChargeSystem system = new CongestionChargeSystem();
+        Vehicle vehicle1 = Vehicle.withRegistration("AA");
+        system.vehicleEnteringZone(vehicle1);
+        system.vehicleEnteringZone(vehicle2);
+        system.vehicleEnteringZone(vehicle3);
+        system.vehicleLeavingZone(vehicle1);
+        system.vehicleLeavingZone(vehicle2);
+        system.vehicleLeavingZone(vehicle3);
+
+        system.calculateCharges();
+
+        assertTrue(system.crossingsByVehicle.get(vehicle1).get(0) instanceof EntryEvent);
+        assertTrue(system.crossingsByVehicle.get(vehicle1).get(1) instanceof ExitEvent);
+    }
+
 
 }
