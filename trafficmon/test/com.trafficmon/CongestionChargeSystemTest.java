@@ -48,8 +48,6 @@ public class CongestionChargeSystemTest {
         assertTrue(system.crossingsByVehicle.get(vehicle1).get(1) instanceof ExitEvent);
     }
 
-
-
     private static void delayMinutes(int mins) throws InterruptedException {
         try {
             delaySeconds(mins * 60);

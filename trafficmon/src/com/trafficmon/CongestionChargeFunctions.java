@@ -17,10 +17,10 @@ public class CongestionChargeFunctions {
     boolean previouslyRegistered(Vehicle vehicle) {
         for (ZoneBoundaryCrossing crossing : eventLog) {
             if (crossing.getVehicle().equals(vehicle)) {
-                return true;
+                return false;
             }
         }
-        return false;
+        return true;
     }
 
     boolean checkOrderingOf(List<ZoneBoundaryCrossing> crossings) {
@@ -63,4 +63,37 @@ public class CongestionChargeFunctions {
         return charge;
     }
 
+    BigDecimal newCalculateChargeForTimeInZone(List<ZoneBoundaryCrossing> crossings) {
+        BigDecimal charge = new BigDecimal(0);
+
+        int time = 0;
+        BigDecimal beforeTwoPM = new BigDecimal(4);
+        BigDecimal afterTwoPM = new BigDecimal(6);
+        BigDecimal moreThanFourHours = new BigDecimal(12);
+
+        ZoneBoundaryCrossing lastEvent = crossings.get(0);
+        ZoneBoundaryCrossing xlastEvent = lastEvent;
+
+        for (ZoneBoundaryCrossing crossing : crossings.subList(1,crossings.size())){
+
+            if (crossing instanceof  ExitEvent) {
+                time += minutesBetween(lastEvent.timestamp(), crossing.timestamp());
+                lastEvent = crossing;
+            }
+            if (time > 4) {
+                charge = charge.add(moreThanFourHours);
+            }
+            if (time < 4){
+                if(xlastEvent.timestamp()<14){
+                    charge = charge.add(beforeTwoPM);
+                }
+                else {
+                    charge = charge.add(afterTwoPM);
+                }
+            }
+        }
+        return charge;
+
+    }
 }
+
