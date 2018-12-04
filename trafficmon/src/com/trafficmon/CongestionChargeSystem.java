@@ -1,10 +1,14 @@
 package com.trafficmon;
 
+import org.joda.time.Hours;
+
 import java.math.BigDecimal;
 import java.util.*;
 
 public class CongestionChargeSystem {
+    public Map<Vehicle, List<ZoneBoundaryCrossing>> crossingsByVehicle = new HashMap<Vehicle, List<ZoneBoundaryCrossing>>();
 
+    int twoPM=14*60;
     public static final BigDecimal CHARGE_RATE_POUNDS_PER_MINUTE = new BigDecimal(0.05);
 
     public final List<ZoneBoundaryCrossing> eventLog = new ArrayList<ZoneBoundaryCrossing>();
@@ -21,9 +25,6 @@ public class CongestionChargeSystem {
     }
 
     public void calculateCharges() {
-
-        Map<Vehicle, List<ZoneBoundaryCrossing>> crossingsByVehicle = new HashMap<Vehicle, List<ZoneBoundaryCrossing>>();
-
         for (ZoneBoundaryCrossing crossing : eventLog) {
             if (!crossingsByVehicle.containsKey(crossing.getVehicle())) {
                 crossingsByVehicle.put(crossing.getVehicle(), new ArrayList<ZoneBoundaryCrossing>());
@@ -57,15 +58,10 @@ public class CongestionChargeSystem {
 
         ZoneBoundaryCrossing lastEvent = crossings.get(0);
 
-        for (ZoneBoundaryCrossing crossing : crossings.subList(1, crossings.size())) {
+        if(totaltimeinzone(crossings)>4*60)
+        if(lastEvent.timestamp()<twoPM)
+        {
 
-            if (crossing instanceof ExitEvent) {
-                charge = charge.add(
-                        new BigDecimal(minutesBetween(lastEvent.timestamp(), crossing.timestamp()))
-                                .multiply(CHARGE_RATE_POUNDS_PER_MINUTE));
-            }
-
-            lastEvent = crossing;
         }
 
         return charge;
@@ -79,6 +75,23 @@ public class CongestionChargeSystem {
         }
         return false;
     }
+
+    public int totaltimeinzone(List<ZoneBoundaryCrossing> crossings)
+    {
+        int totaltime = 0;
+        ZoneBoundaryCrossing lastEvent = crossings.get(0);
+
+        for (ZoneBoundaryCrossing crossing : crossings.subList(1, crossings.size())) {
+
+            if (crossing instanceof ExitEvent) {
+                totaltime = totaltime+minutesBetween(lastEvent.timestamp(), crossing.timestamp());
+            }
+
+            lastEvent = crossing;
+        }
+        return totaltime;
+    }
+
 
     public boolean checkOrderingOf(List<ZoneBoundaryCrossing> crossings) {
 
@@ -101,7 +114,7 @@ public class CongestionChargeSystem {
     }
 
     public int minutesBetween(long startTimeMs, long endTimeMs) {
-        return (int) Math.ceil((endTimeMs - startTimeMs) / (1000.0 * 60.0));
+        return (int) Math.ceil((endTimeMs - startTimeMs));
     }
 
 }
