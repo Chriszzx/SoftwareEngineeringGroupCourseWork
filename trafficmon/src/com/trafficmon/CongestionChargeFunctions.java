@@ -71,12 +71,12 @@ public class CongestionChargeFunctions {
         BigDecimal charge = new BigDecimal(0);
 
         int time = 0;
-        BigDecimal beforeTwoPM = new BigDecimal(4);
-        BigDecimal afterTwoPM = new BigDecimal(6);
+        BigDecimal beforeTwoPM = new BigDecimal(6);
+        BigDecimal afterTwoPM = new BigDecimal(4);
         BigDecimal moreThanFourHours = new BigDecimal(12);
 
         ZoneBoundaryCrossing lastEvent = crossings.get(0);
-        ZoneBoundaryCrossing xlastEvent = lastEvent;
+        long xlastEvent = lastEvent.timestamp();
 
         for (ZoneBoundaryCrossing crossing : crossings.subList(1, crossings.size())) {
 
@@ -88,8 +88,8 @@ public class CongestionChargeFunctions {
         if (time > 240) {
             charge = charge.add(moreThanFourHours);
         }
-        else  {
-            if (xlastEvent.timestamp() < 840) {
+        if (time <= 240 ) {
+            if (xlastEvent < 840) {
                 charge = charge.add(beforeTwoPM);
             } else {
                 charge = charge.add(afterTwoPM);

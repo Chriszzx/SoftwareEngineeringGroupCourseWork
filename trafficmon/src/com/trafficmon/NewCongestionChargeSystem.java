@@ -8,23 +8,23 @@ import java.util.Map;
 
 public class NewCongestionChargeSystem {
 
-    private CongestionChargeFunctions functions = new CongestionChargeFunctions();
-    private Map<Vehicle, List<ZoneBoundaryCrossing>> crossingsByVehicle = new HashMap<Vehicle, List<ZoneBoundaryCrossing>>();
+    CongestionChargeFunctions functions = new CongestionChargeFunctions();
+    Map<Vehicle, List<ZoneBoundaryCrossing>> crossingsByVehicle = new HashMap<Vehicle, List<ZoneBoundaryCrossing>>();
 
     public void vehicleEnteringZone(Vehicle vehicle) {
-        CongestionChargeFunctions.eventLog.add(new EntryEvent(vehicle));
+        functions.eventLog.add(new EntryEvent(vehicle));
     }
 
     public void vehicleLeavingZone(Vehicle vehicle) {
         if (functions.previouslyRegistered(vehicle)) {
             return;
         }
-        CongestionChargeFunctions.eventLog.add(new ExitEvent(vehicle));
+        functions.eventLog.add(new ExitEvent(vehicle));
     }
 
     public void newCalculateCharges() {
 
-        for (ZoneBoundaryCrossing crossing : CongestionChargeFunctions.eventLog) {
+        for (ZoneBoundaryCrossing crossing : functions.eventLog) {
             if (!crossingsByVehicle.containsKey(crossing.getVehicle())) {
                 crossingsByVehicle.put(crossing.getVehicle(), new ArrayList<ZoneBoundaryCrossing>());
             }

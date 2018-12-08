@@ -3,7 +3,7 @@ package com.trafficmon;
 
 public class example {
     public static void main(String[] args) throws Exception {
-        CongestionChargeSystem congestionChargeSystem = new CongestionChargeSystem();
+        NewCongestionChargeSystem congestionChargeSystem =new NewCongestionChargeSystem();
         congestionChargeSystem.vehicleEnteringZone(Vehicle.withRegistration("A123 XYZ"));
         delaySeconds(15);
         congestionChargeSystem.vehicleEnteringZone(Vehicle.withRegistration("J091 4PY"));
@@ -11,7 +11,7 @@ public class example {
         congestionChargeSystem.vehicleLeavingZone(Vehicle.withRegistration("A123 XYZ"));
         delayMinutes(10);
         congestionChargeSystem.vehicleLeavingZone(Vehicle.withRegistration("J091 4PY"));
-        congestionChargeSystem.calculateCharges();
+        congestionChargeSystem.newCalculateCharges();
     }
     private static void delayMinutes(int mins) throws InterruptedException {
         delaySeconds(mins * 60);

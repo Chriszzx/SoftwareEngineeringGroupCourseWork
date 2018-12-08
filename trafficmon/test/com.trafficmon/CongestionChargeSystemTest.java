@@ -1,14 +1,10 @@
 package com.trafficmon;
 
 import org.junit.Test;
-import static org.hamcrest.CoreMatchers.containsString;
+
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
-import static org.junit.Assert.*;
-
-import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.List;
+import static org.junit.Assert.assertTrue;
 
 public class CongestionChargeSystemTest {
 
@@ -24,7 +20,7 @@ public class CongestionChargeSystemTest {
             }
         };
         congestionChargeSystem.vehicleEnteringZone(vehicle);
-        assertThat(CongestionChargeFunctions.eventLog.get(0) instanceof EntryEvent,is(true));
+        assertThat(functions.eventLog.get(0) instanceof EntryEvent,is(true));
     }
 
     @Test
