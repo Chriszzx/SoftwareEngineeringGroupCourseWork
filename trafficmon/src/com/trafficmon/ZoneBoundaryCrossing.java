@@ -1,8 +1,5 @@
 package com.trafficmon;
 
-import NewTest.FakeTime;
-import org.joda.time.LocalTime;
-
 public abstract class ZoneBoundaryCrossing {
 
     private final Vehicle vehicle;

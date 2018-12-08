@@ -1,10 +1,6 @@
 package NewTest;
 
-import com.trafficmon.CongestionChargeSystem;
-import com.trafficmon.ExitEvent;
-import com.trafficmon.EntryEvent;
-import com.trafficmon.Vehicle;
-import com.trafficmon.ZoneBoundaryCrossing;
+import com.trafficmon.*;
 import org.junit.Test;
 
 import static org.junit.Assert.assertFalse;
@@ -63,15 +59,5 @@ public class CongestionChargeSystemTest {
         assertTrue(system.crossingsByVehicle.get(vehicle1).get(1) instanceof ExitEvent);
     }
 
-    @Test
-    public void FakeCarTest()
-    {
-        FakeTime faketime=new FakeTime();
-        CongestionChargeSystem system = new CongestionChargeSystem();
-        system.vehicleEnteringZone(vehicle1);
-        faketime.delayhours(5);
-        system.vehicleLeavingZone(vehicle1);
-
-    }
 }
 

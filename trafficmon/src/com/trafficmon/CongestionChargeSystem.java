@@ -54,7 +54,7 @@ public class CongestionChargeSystem {
 
     public int totalcharge(List<ZoneBoundaryCrossing> crossings){
         ZoneBoundaryCrossing lastEvent = crossings.get(0);
-        int totaltime = totaltimeinzone(crossings);
+        int totaltime = totalTimeinZone(crossings);
         if (totaltime > 240) {
             return 12;
         }
@@ -78,7 +78,7 @@ public class CongestionChargeSystem {
         return false;
     }
 
-    public int totaltimeinzone(List<ZoneBoundaryCrossing> crossings)
+    public int totalTimeinZone(List<ZoneBoundaryCrossing> crossings)
     {
         int totaltime =0;
         ZoneBoundaryCrossing lastEvent = crossings.get(0);

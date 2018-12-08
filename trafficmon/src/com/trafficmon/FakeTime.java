@@ -1,16 +1,16 @@
-package NewTest;
+package com.trafficmon;
 
 import org.joda.time.Hours;
 import org.joda.time.LocalTime;
 
 public class FakeTime {
 
-    private static int currentTime;
+    private static LocalTime localtime=new LocalTime();
+    private static int currentTime=localtime.getHourOfDay()*60+localtime.getMinuteOfHour();
     private static int offset;
+
     public void FakeTime()
     {
-
-        currentTime=new LocalTime().getHourOfDay()*60+new LocalTime().getMinuteOfHour();
         offset=0;
     }
 
@@ -31,6 +31,7 @@ public class FakeTime {
 
     public void resetTime()
     {
-        currentTime=new LocalTime().getHourOfDay()*60+new LocalTime().getMinuteOfHour();
+        currentTime=localtime.getHourOfDay()*60+localtime.getMinuteOfHour();
+        offset=0;
     }
 }
