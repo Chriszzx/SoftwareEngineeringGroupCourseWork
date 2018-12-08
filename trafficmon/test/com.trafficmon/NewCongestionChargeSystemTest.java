@@ -22,6 +22,7 @@ public class NewCongestionChargeSystemTest {
         fakeTime.delayhours(2);
         newCongestionChargeSystem.vehicleLeavingZone(vehicle);
         assertThat(functions.newCalculateChargeForTimeInZone(functions.eventLog), is(new BigDecimal(4)));
+        fakeTime.resetTime();
     }
 
     @Test
@@ -35,6 +36,7 @@ public class NewCongestionChargeSystemTest {
         fakeTime.delayhours(2);
         newCongestionChargeSystem.vehicleLeavingZone(vehicle);
         assertThat(functions.newCalculateChargeForTimeInZone(functions.eventLog), is(new BigDecimal(6)));
+        fakeTime.resetTime();
     }
 
     @Test
@@ -48,6 +50,7 @@ public class NewCongestionChargeSystemTest {
         fakeTime.delayhours(5);
         newCongestionChargeSystem.vehicleLeavingZone(vehicle);
         assertThat(functions.newCalculateChargeForTimeInZone(functions.eventLog), is(new BigDecimal(12)));
+        fakeTime.resetTime();
     }
 
     @Test
@@ -57,6 +60,13 @@ public class NewCongestionChargeSystemTest {
         FakeTime fakeTime = new FakeTime();
         Vehicle vehicle = Vehicle.withRegistration("A123 XYZ");
         fakeTime.setTime(10, 0);
-        
+        newCongestionChargeSystem.vehicleEnteringZone(vehicle);
+        fakeTime.setTime(11,0);
+        newCongestionChargeSystem.vehicleLeavingZone(vehicle);
+        fakeTime.setTime(15,0);
+        newCongestionChargeSystem.vehicleEnteringZone(vehicle);
+        fakeTime.setTime(16,0);
+        newCongestionChargeSystem.vehicleLeavingZone(vehicle);
+        assertThat(functions.newCalculateChargeForTimeInZone(functions.eventLog),is(new BigDecimal(4)));
     }
 }

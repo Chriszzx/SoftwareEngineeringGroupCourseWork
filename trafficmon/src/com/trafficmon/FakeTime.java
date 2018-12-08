@@ -9,7 +9,7 @@ import org.joda.time.LocalTime;
 
         void delayhours(int hour)
         {
-            offset=hour*60;
+            offset+=hour*60;
         }
 
         int getTime()

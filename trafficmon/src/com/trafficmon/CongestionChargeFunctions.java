@@ -14,6 +14,10 @@ public class CongestionChargeFunctions {
         return (int) Math.ceil((endTimeMs - startTimeMs) / (1000.0 * 60.0));
     }
 
+    int newMinutesBetween(long startTime, long endTime) {
+        return (int) Math.ceil((endTime - startTime));
+    }
+
     boolean previouslyRegistered(Vehicle vehicle) {
         for (ZoneBoundaryCrossing crossing : eventLog) {
             if (crossing.getVehicle().equals(vehicle)) {
@@ -77,18 +81,18 @@ public class CongestionChargeFunctions {
         for (ZoneBoundaryCrossing crossing : crossings.subList(1, crossings.size())) {
 
             if (crossing instanceof ExitEvent) {
-                time += minutesBetween(lastEvent.timestamp(), crossing.timestamp());
-                lastEvent = crossing;
+                time += newMinutesBetween(lastEvent.timestamp(), crossing.timestamp());
             }
-            if (time > 240) {
-                charge = charge.add(moreThanFourHours);
-            }
-            else  {
-                if (xlastEvent.timestamp() < 840) {
-                    charge = charge.add(beforeTwoPM);
-                } else {
-                    charge = charge.add(afterTwoPM);
-                }
+            lastEvent = crossing;
+        }
+        if (time > 240) {
+            charge = charge.add(moreThanFourHours);
+        }
+        else  {
+            if (xlastEvent.timestamp() < 840) {
+                charge = charge.add(beforeTwoPM);
+            } else {
+                charge = charge.add(afterTwoPM);
             }
         }
         return charge;
