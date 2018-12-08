@@ -16,7 +16,7 @@ public class FakeTime {
 
     public void delayhours(int hour)
     {
-        offset=hour*60;
+        offset+=hour*60;
     }
 
     public int getTime()
