@@ -1,10 +1,7 @@
 package com.trafficmon;
 
-
 import org.junit.Test;
-
 import java.math.BigDecimal;
-
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
 
@@ -25,40 +22,40 @@ public class NewCongestionChargeFunctionsTest {
 
     @Test
     public void vehicleEnterAndLeaveBeforeTwoPm() {
-        functions.eventLog.clear();
+        NewCongestionChargeFunctions.eventLog.clear();
         fakeTime.setTime(8,0);
         newCongestionChargeSystem.vehicleEnteringZone(vehicle);
         fakeTime.delayhours(2);
         newCongestionChargeSystem.vehicleLeavingZone(vehicle);
-        assertThat(functions.newCalculateChargeForTimeInZone(functions.eventLog), is(new BigDecimal(6)));
+        assertThat(functions.newCalculateChargeForTimeInZone(NewCongestionChargeFunctions.eventLog), is(new BigDecimal(6)));
         fakeTime.resetTime();
     }
 
     @Test
     public void vehicleEnterAndLeaveAfterTwoPm() {
-        functions.eventLog.clear();
+        NewCongestionChargeFunctions.eventLog.clear();
         fakeTime.setTime(15, 0);
         newCongestionChargeSystem.vehicleEnteringZone(vehicle);
         fakeTime.delayhours(2);
         newCongestionChargeSystem.vehicleLeavingZone(vehicle);
-        assertThat(functions.newCalculateChargeForTimeInZone(functions.eventLog), is(new BigDecimal(4)));
+        assertThat(functions.newCalculateChargeForTimeInZone(NewCongestionChargeFunctions.eventLog), is(new BigDecimal(4)));
         fakeTime.resetTime();
     }
 
     @Test
     public void vehicleStayInsideZoneMoreThanFourHoursCase1() {
-        functions.eventLog.clear();
+        NewCongestionChargeFunctions.eventLog.clear();
         fakeTime.setTime(14, 0);
         newCongestionChargeSystem.vehicleEnteringZone(vehicle);
         fakeTime.delayhours(5);
         newCongestionChargeSystem.vehicleLeavingZone(vehicle);
-        assertThat(functions.newCalculateChargeForTimeInZone(functions.eventLog), is(new BigDecimal(12)));
+        assertThat(functions.newCalculateChargeForTimeInZone(NewCongestionChargeFunctions.eventLog), is(new BigDecimal(12)));
         fakeTime.resetTime();
     }
 
     @Test
     public void vehicleStayInsideZoneMoreThanFourHoursCase2(){
-        functions.eventLog.clear();
+        NewCongestionChargeFunctions.eventLog.clear();
         fakeTime.setTime(10, 0);
         newCongestionChargeSystem.vehicleEnteringZone(vehicle);
         fakeTime.delayhours(1);
@@ -67,7 +64,7 @@ public class NewCongestionChargeFunctionsTest {
         newCongestionChargeSystem.vehicleEnteringZone(vehicle);
         fakeTime.delayhours(1);
         newCongestionChargeSystem.vehicleLeavingZone(vehicle);
-        assertThat(functions.newCalculateChargeForTimeInZone(functions.eventLog),is(new BigDecimal(6)));
+        assertThat(functions.newCalculateChargeForTimeInZone(NewCongestionChargeFunctions.eventLog),is(new BigDecimal(6)));
         fakeTime.resetTime();
     }
 }

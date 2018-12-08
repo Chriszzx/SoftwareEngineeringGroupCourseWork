@@ -4,11 +4,11 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CongestionChargeFunctions {
+class CongestionChargeFunctions {
 
     private static final BigDecimal CHARGE_RATE_POUNDS_PER_MINUTE = new BigDecimal(0.05);
 
-    static final List<ZoneBoundaryCrossing> eventLog = new ArrayList<ZoneBoundaryCrossing>();
+    static final List<ZoneBoundaryCrossing> eventLog = new ArrayList<>();
 
     int minutesBetween(long startTimeMs, long endTimeMs) {
         return (int) Math.ceil((endTimeMs - startTimeMs) / (1000.0 * 60.0));

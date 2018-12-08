@@ -4,9 +4,9 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
-public class NewCongestionChargeFunctions {
+class NewCongestionChargeFunctions {
 
-    static final List<ZoneBoundaryCrossing> eventLog = new ArrayList<ZoneBoundaryCrossing>();
+    static final List<ZoneBoundaryCrossing> eventLog = new ArrayList<>();
 
     int newMinutesBetween(long startTime, long endTime) {
         return (int) Math.ceil((endTime - startTime));

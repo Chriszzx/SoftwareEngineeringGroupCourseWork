@@ -20,7 +20,6 @@ public class CongestionChargeFunctionsTest {
     @Test
     public void previouslyRegisteredTest(){
         CongestionChargeSystem congestionChargeSystem = new CongestionChargeSystem();
-        CongestionChargeFunctions functions = new CongestionChargeFunctions();
         Vehicle vehicle = Vehicle.withRegistration("A123 XYZ");
         Vehicle vehicle1 = Vehicle.withRegistration("XXX XXX");
         ZoneBoundaryCrossing zoneBoundaryCrossing = new ZoneBoundaryCrossing(vehicle);

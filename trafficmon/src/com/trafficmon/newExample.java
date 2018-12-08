@@ -1,7 +1,7 @@
 package com.trafficmon;
 
 
-public class example {
+public class newExample {
     public static void main(String[] args) throws Exception {
         NewCongestionChargeSystem congestionChargeSystem =new NewCongestionChargeSystem();
         congestionChargeSystem.vehicleEnteringZone(Vehicle.withRegistration("A123 XYZ"));
