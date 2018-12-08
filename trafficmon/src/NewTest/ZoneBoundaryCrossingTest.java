@@ -3,12 +3,16 @@ package NewTest;
 import com.trafficmon.Vehicle;
 import com.trafficmon.ZoneBoundaryCrossing;
 import org.junit.Test;
+import org.joda.time.Hours;
+import org.joda.time.LocalTime;
+
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 public class ZoneBoundaryCrossingTest {
 
+    LocalTime local = new LocalTime();
     @Test
     public void getVehicleTest(){
         ZoneBoundaryCrossing crossing = new ZoneBoundaryCrossing(Vehicle.withRegistration("AA")) {};
@@ -19,7 +23,7 @@ public class ZoneBoundaryCrossingTest {
     public void timestampTest()
     {
         ZoneBoundaryCrossing crossing = new ZoneBoundaryCrossing(Vehicle.withRegistration("AA")) {};
-        assertEquals(crossing.timestamp(),System.currentTimeMillis());
+        assertEquals(crossing.timestamp(),local.getHourOfDay()*60+local.getMinuteOfHour());
     }
 
 }
