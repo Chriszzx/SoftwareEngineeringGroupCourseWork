@@ -29,18 +29,18 @@ public class CongestionChargeFunctions {
 
         for (ZoneBoundaryCrossing crossing : crossings.subList(1, crossings.size())) {
             if (crossing.timestamp() < lastEvent.timestamp()) {
-                return false;
+                return true;
             }
             if (crossing instanceof EntryEvent && lastEvent instanceof EntryEvent) {
-                return false;
+                return true;
             }
             if (crossing instanceof ExitEvent && lastEvent instanceof ExitEvent) {
-                return false;
+                return true;
             }
             lastEvent = crossing;
         }
 
-        return true;
+        return false;
     }
 
     BigDecimal calculateChargeForTimeInZone(List<ZoneBoundaryCrossing> crossings) {
@@ -74,26 +74,24 @@ public class CongestionChargeFunctions {
         ZoneBoundaryCrossing lastEvent = crossings.get(0);
         ZoneBoundaryCrossing xlastEvent = lastEvent;
 
-        for (ZoneBoundaryCrossing crossing : crossings.subList(1,crossings.size())){
+        for (ZoneBoundaryCrossing crossing : crossings.subList(1, crossings.size())) {
 
-            if (crossing instanceof  ExitEvent) {
+            if (crossing instanceof ExitEvent) {
                 time += minutesBetween(lastEvent.timestamp(), crossing.timestamp());
                 lastEvent = crossing;
             }
-            if (time > 4) {
+            if (time > 240) {
                 charge = charge.add(moreThanFourHours);
             }
-            if (time < 4){
-                if(xlastEvent.timestamp()<14){
+            else  {
+                if (xlastEvent.timestamp() < 840) {
                     charge = charge.add(beforeTwoPM);
-                }
-                else {
+                } else {
                     charge = charge.add(afterTwoPM);
                 }
             }
         }
         return charge;
-
     }
 }
 

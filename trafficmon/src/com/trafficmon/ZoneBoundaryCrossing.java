@@ -1,16 +1,13 @@
 package com.trafficmon;
 
-import org.joda.time.LocalTime;
-
 public class ZoneBoundaryCrossing {
 
     private final Vehicle vehicle;
     private long timestamp;
-    private final long time;
 
     public ZoneBoundaryCrossing(Vehicle vehicle) {
         this.vehicle = vehicle;
-        this.time =  this.timestamp=(new LocalTime().getHourOfDay())*60+new LocalTime().getMinuteOfHour();
+        this.timestamp=new FakeTime().getTime();
     }
 
     public Vehicle getVehicle() {
@@ -18,6 +15,6 @@ public class ZoneBoundaryCrossing {
     }
 
     public long timestamp() {
-        return time;
+        return timestamp;
     }
 }

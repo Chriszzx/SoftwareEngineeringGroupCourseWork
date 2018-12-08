@@ -32,7 +32,7 @@ public class CongestionChargeSystem {
             Vehicle vehicle = vehicleCrossings.getKey();
             List<ZoneBoundaryCrossing> crossings = vehicleCrossings.getValue();
 
-            if (!functions.checkOrderingOf(crossings)) {
+            if (functions.checkOrderingOf(crossings)) {
                 OperationsTeam.getInstance().triggerInvestigationInto(vehicle);
             } else {
 
