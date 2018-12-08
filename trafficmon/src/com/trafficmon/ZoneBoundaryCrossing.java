@@ -1,5 +1,6 @@
 package com.trafficmon;
 
+import NewTest.FakeTime;
 import org.joda.time.LocalTime;
 
 public abstract class ZoneBoundaryCrossing {
@@ -9,7 +10,7 @@ public abstract class ZoneBoundaryCrossing {
 
     public ZoneBoundaryCrossing(Vehicle vehicle) {
         this.vehicle = vehicle;
-        this.timestamp=(new LocalTime().getHourOfDay())*60+new LocalTime().getMinuteOfHour();
+        this.timestamp=new FakeTime().getTime();
     }
 
     public Vehicle getVehicle() {

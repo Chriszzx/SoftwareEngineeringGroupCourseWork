@@ -61,10 +61,10 @@ public class CongestionChargeSystem {
         else {
             lastEvent = crossings.get(0);
             if (lastEvent.timestamp() < 840) {
-                return 4;
+                return 6;
             }
             else
-                return 6;
+                return 4;
         }
     }
 
