@@ -21,6 +21,7 @@ public class TimeTest {
     {
         faketime.delayhours(2);
         assertEquals(faketime.getTime(),local.getHourOfDay()*60+local.getMinuteOfHour()+120);
+        faketime.resetTime();
     }
 
     @Test
@@ -28,6 +29,7 @@ public class TimeTest {
     {
         faketime.setTime(16,20);
         assertEquals(faketime.getTime(),16*60+20);
+        faketime.resetTime();
     }
 
     @Test

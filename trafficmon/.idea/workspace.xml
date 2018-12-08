@@ -27,9 +27,10 @@
       <file leaf-file-name="TimeTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/NewTest/TimeTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-185">
-              <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+            <state relative-caret-position="255">
+              <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
               <folding>
+                <element signature="imports" expanded="true" />
                 <element signature="e#297#298#0" expanded="true" />
                 <element signature="e#393#394#0" expanded="true" />
               </folding>
@@ -49,10 +50,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CongestionChargeSystem.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="CongestionChargeSystem.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/trafficmon/CongestionChargeSystem.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-590">
+            <state relative-caret-position="739">
               <caret line="53" column="0" lean-forward="true" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -75,6 +76,19 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="EntryEvent.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/trafficmon/EntryEvent.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="5" lean-forward="true" selection-start-line="3" selection-start-column="4" selection-end-line="5" selection-end-column="5" />
+              <folding>
+                <element signature="e#131#132#0" expanded="true" />
+                <element signature="e#173#174#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Vehicle.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/trafficmon/Vehicle.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -85,7 +99,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ZoneBoundaryCrossing.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ZoneBoundaryCrossing.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/trafficmon/ZoneBoundaryCrossing.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="135">
@@ -101,8 +115,8 @@
       <file leaf-file-name="FakeTime.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/trafficmon/FakeTime.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="113">
-              <caret line="9" column="23" lean-forward="false" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
+            <state relative-caret-position="450">
+              <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#322#323#0" expanded="true" />
@@ -121,8 +135,8 @@
       <file leaf-file-name="Example.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/trafficmon/Example.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="43" lean-forward="false" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
+            <state relative-caret-position="120">
+              <caret line="8" column="29" lean-forward="false" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -167,9 +181,9 @@
         <option value="$PROJECT_DIR$/src/NewTest/FakeTime.java" />
         <option value="$PROJECT_DIR$/src/com/trafficmon/CongestionChargeSystem.java" />
         <option value="$PROJECT_DIR$/src/NewTest/CongestionChargeSystemTest.java" />
-        <option value="$PROJECT_DIR$/src/com/trafficmon/Example.java" />
         <option value="$PROJECT_DIR$/src/com/trafficmon/FakeTime.java" />
         <option value="$PROJECT_DIR$/src/NewTest/TimeTest.java" />
+        <option value="$PROJECT_DIR$/src/com/trafficmon/Example.java" />
       </list>
     </option>
   </component>
@@ -266,7 +280,26 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.TimeTest.ResetTimeTest">
+  <component name="RunManager" selected="Application.Example">
+    <configuration name="Example" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.trafficmon.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="com.trafficmon.Example" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="trafficmon" />
+      <envs />
+    </configuration>
     <configuration name="TimeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -367,31 +400,6 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="TimeTest.delayTimeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="NewTest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="trafficmon" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="NewTest" />
-      <option name="MAIN_CLASS_NAME" value="NewTest.TimeTest" />
-      <option name="METHOD_NAME" value="delayTimeTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-    </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -474,19 +482,19 @@
       <listeners />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.TimeTest.delayTimeTest" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.TimeTest" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.TimeTest.DelayTimeTest" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.TimeTest.SetTimeTest" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.TimeTest.ResetTimeTest" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.TimeTest" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.TimeTest.DelayTimeTest" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.TimeTest.SetTimeTest" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.TimeTest.ResetTimeTest" />
+      <item index="4" class="java.lang.String" itemvalue="Application.Example" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.TimeTest.ResetTimeTest" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.TimeTest.SetTimeTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.TimeTest.DelayTimeTest" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.TimeTest.delayTimeTest" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.TimeTest" />
+        <item index="0" class="java.lang.String" itemvalue="Application.Example" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.TimeTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.TimeTest.ResetTimeTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.TimeTest.SetTimeTest" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.TimeTest.DelayTimeTest" />
       </list>
     </recent_temporary>
   </component>
@@ -502,15 +510,24 @@
       <updated>1542323058921</updated>
       <workItem from="1542323060351" duration="58000" />
       <workItem from="1543750006219" duration="17297000" />
-      <workItem from="1543929062171" duration="16151000" />
+      <workItem from="1543929062171" duration="16505000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TimeTest - 2018.12.08 at 11h 56m 47s.xml">
+    <history-entry file="TimeTest - 2018.12.08 at 13h 02m 00s.xml">
       <configuration name="TimeTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TimeTest - 2018.12.08 at 11h 57m 21s.xml">
+    <history-entry file="TimeTest - 2018.12.08 at 13h 02m 27s.xml">
+      <configuration name="TimeTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TimeTest - 2018.12.08 at 13h 03m 09s.xml">
+      <configuration name="TimeTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TimeTest - 2018.12.08 at 13h 03m 24s.xml">
+      <configuration name="TimeTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TimeTest - 2018.12.08 at 13h 03m 36s.xml">
       <configuration name="TimeTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="TimeTest_DelayTimeTest - 2018.12.08 at 11h 59m 53s.xml">
@@ -528,18 +545,9 @@
     <history-entry file="TimeTest_SetTimeTest - 2018.12.08 at 12h 01m 08s.xml">
       <configuration name="TimeTest.SetTimeTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TimeTest_delayTimeTest - 2018.12.08 at 11h 57m 32s.xml">
-      <configuration name="TimeTest.delayTimeTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TimeTest_delayTimeTest - 2018.12.08 at 11h 58m 11s.xml">
-      <configuration name="TimeTest.delayTimeTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TimeTest_delayTimeTest - 2018.12.08 at 11h 58m 39s.xml">
-      <configuration name="TimeTest.delayTimeTest" configurationId="JUnit" />
-    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33506000" />
+    <option name="totallyTimeSpent" value="33860000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -762,14 +770,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/trafficmon/EntryEvent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="5" column="5" lean-forward="true" selection-start-line="3" selection-start-column="4" selection-end-line="5" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/NewTest/TestEntryEvent.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -818,18 +818,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/trafficmon/CongestionChargeSystem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-590">
-          <caret line="53" column="0" lean-forward="true" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#257#294#0" expanded="true" />
-            <element signature="e#425#447#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/NewTest/VehicleTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -850,11 +838,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/trafficmon/Example.java">
+    <entry file="file://$PROJECT_DIR$/src/com/trafficmon/ZoneBoundaryCrossing.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="43" lean-forward="false" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
-          <folding />
+        <state relative-caret-position="135">
+          <caret line="9" column="43" lean-forward="true" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
+          <folding>
+            <element signature="e#367#368#0" expanded="true" />
+            <element signature="e#399#400#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -870,9 +861,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/NewTest/TimeTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-185">
-          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+        <state relative-caret-position="255">
+          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="e#297#298#0" expanded="true" />
             <element signature="e#393#394#0" expanded="true" />
           </folding>
@@ -881,8 +873,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/trafficmon/FakeTime.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="9" column="23" lean-forward="false" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
+        <state relative-caret-position="450">
+          <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#322#323#0" expanded="true" />
@@ -897,13 +889,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/trafficmon/ZoneBoundaryCrossing.java">
+    <entry file="file://$PROJECT_DIR$/src/com/trafficmon/EntryEvent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="43" lean-forward="true" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
+        <state relative-caret-position="75">
+          <caret line="5" column="5" lean-forward="true" selection-start-line="3" selection-start-column="4" selection-end-line="5" selection-end-column="5" />
           <folding>
-            <element signature="e#367#368#0" expanded="true" />
-            <element signature="e#399#400#0" expanded="true" />
+            <element signature="e#131#132#0" expanded="true" />
+            <element signature="e#173#174#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/trafficmon/Example.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="29" lean-forward="false" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/trafficmon/CongestionChargeSystem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="739">
+          <caret line="53" column="0" lean-forward="true" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#257#294#0" expanded="true" />
+            <element signature="e#425#447#0" expanded="true" />
           </folding>
         </state>
       </provider>
