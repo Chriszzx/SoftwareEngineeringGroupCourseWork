@@ -8,7 +8,7 @@ import java.util.Map;
 
 public class NewCongestionChargeSystem {
 
-    CongestionChargeFunctions functions = new CongestionChargeFunctions();
+    NewCongestionChargeFunctions functions = new NewCongestionChargeFunctions();
     Map<Vehicle, List<ZoneBoundaryCrossing>> crossingsByVehicle = new HashMap<Vehicle, List<ZoneBoundaryCrossing>>();
 
     public void vehicleEnteringZone(Vehicle vehicle) {
