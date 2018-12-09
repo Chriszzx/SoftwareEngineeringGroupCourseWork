@@ -1,7 +1,6 @@
 package com.trafficmon;
 
 import org.junit.Test;
-
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertTrue;
@@ -42,24 +41,5 @@ public class CongestionChargeSystemTest {
 
         assertTrue(system.crossingsByVehicle.get(vehicle1).get(0) instanceof EntryEvent);
         assertTrue(system.crossingsByVehicle.get(vehicle1).get(1) instanceof ExitEvent);
-    }
-
-    private static void delayMinutes(int mins) throws InterruptedException {
-        try {
-            delaySeconds(mins * 60);
-        }
-        catch (InterruptedException e)
-        {
-            System.out.print("Error!");
-        }
-    }
-    private static void delaySeconds(int secs) throws InterruptedException {
-        try {
-            Thread.sleep(secs*1000);
-        }
-        catch (InterruptedException e)
-        {
-            System.out.print("Error!");
-        }
     }
 }

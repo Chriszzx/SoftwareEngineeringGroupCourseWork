@@ -18,17 +18,8 @@ public class CongestionChargeFunctionsTest {
     }
 
     @Test
-    public void newMinutesBetweenTest(){
-        CongestionChargeFunctions functions = new CongestionChargeFunctions();
-        long startTime = 12;
-        long endTime = 18;
-        assertThat(functions.newMinutesBetween(startTime,endTime),is (6));
-    }
-
-    @Test
     public void previouslyRegisteredTest(){
         CongestionChargeSystem congestionChargeSystem = new CongestionChargeSystem();
-        CongestionChargeFunctions functions = new CongestionChargeFunctions();
         Vehicle vehicle = Vehicle.withRegistration("A123 XYZ");
         Vehicle vehicle1 = Vehicle.withRegistration("XXX XXX");
         ZoneBoundaryCrossing zoneBoundaryCrossing = new ZoneBoundaryCrossing(vehicle);

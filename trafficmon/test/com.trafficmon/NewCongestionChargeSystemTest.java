@@ -1,66 +1,37 @@
 package com.trafficmon;
 
-
 import org.junit.Test;
-
-import java.math.BigDecimal;
-
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
+import static org.junit.Assert.assertTrue;
 
-
-public class NewCongestionChargeSystemTest {
-
-    private NewCongestionChargeSystem newCongestionChargeSystem = new NewCongestionChargeSystem();
-    private CongestionChargeFunctions functions = new CongestionChargeFunctions();
-    private FakeTime fakeTime = new FakeTime();
-    private Vehicle vehicle = Vehicle.withRegistration("A123 XYZ");
-
+public class NewCongestionChargeSystemTest{
     @Test
-    public void vehicleEnterAndLeaveBeforeTwoPm() {
-        functions.eventLog.clear();
-        fakeTime.setTime(8,0);
+    public void vehicleEnteringAndLeavingZone() {
+        NewCongestionChargeSystem newCongestionChargeSystem = new NewCongestionChargeSystem();
+        Vehicle vehicle = Vehicle.withRegistration("A123 XYZ");
         newCongestionChargeSystem.vehicleEnteringZone(vehicle);
-        fakeTime.delayhours(2);
-        newCongestionChargeSystem.vehicleLeavingZone(vehicle);
-        assertThat(functions.newCalculateChargeForTimeInZone(functions.eventLog), is(new BigDecimal(6)));
-        fakeTime.resetTime();
+        assertThat(NewCongestionChargeFunctions.eventLog.get(0) instanceof EntryEvent,is(true));
     }
 
     @Test
-    public void vehicleEnterAndLeaveAfterTwoPm() {
-        functions.eventLog.clear();
-        fakeTime.setTime(15, 0);
-        newCongestionChargeSystem.vehicleEnteringZone(vehicle);
-        fakeTime.delayhours(2);
-        newCongestionChargeSystem.vehicleLeavingZone(vehicle);
-        assertThat(functions.newCalculateChargeForTimeInZone(functions.eventLog), is(new BigDecimal(4)));
-        fakeTime.resetTime();
-    }
+    public void MapTest()
+    {
+        Vehicle vehicle1 = Vehicle.withRegistration("AA");
+        Vehicle vehicle2 = Vehicle.withRegistration("BB");
+        Vehicle vehicle3 = Vehicle.withRegistration("CC");
 
-    @Test
-    public void vehicleStayInsideZoneMoreThanFourHoursCase1() {
-        functions.eventLog.clear();
-        fakeTime.setTime(14, 0);
-        newCongestionChargeSystem.vehicleEnteringZone(vehicle);
-        fakeTime.delayhours(5);
-        newCongestionChargeSystem.vehicleLeavingZone(vehicle);
-        assertThat(functions.newCalculateChargeForTimeInZone(functions.eventLog), is(new BigDecimal(12)));
-        fakeTime.resetTime();
-    }
+        CongestionChargeSystem system = new CongestionChargeSystem();
+        system.vehicleEnteringZone(vehicle1);
+        system.vehicleEnteringZone(vehicle2);
+        system.vehicleEnteringZone(vehicle3);
+        system.vehicleLeavingZone(vehicle1);
+        system.vehicleLeavingZone(vehicle2);
+        system.vehicleLeavingZone(vehicle3);
 
-    @Test
-    public void vehicleStayInsideZoneMoreThanFourHoursCase2(){
-        functions.eventLog.clear();
-        fakeTime.setTime(10, 0);
-        newCongestionChargeSystem.vehicleEnteringZone(vehicle);
-        fakeTime.delayhours(1);
-        newCongestionChargeSystem.vehicleLeavingZone(vehicle);
-        fakeTime.delayhours(4);
-        newCongestionChargeSystem.vehicleEnteringZone(vehicle);
-        fakeTime.delayhours(1);
-        newCongestionChargeSystem.vehicleLeavingZone(vehicle);
-        assertThat(functions.newCalculateChargeForTimeInZone(functions.eventLog),is(new BigDecimal(6)));
-        fakeTime.resetTime();
+        system.calculateCharges();
+
+        assertTrue(system.crossingsByVehicle.get(vehicle1).get(0) instanceof EntryEvent);
+        assertTrue(system.crossingsByVehicle.get(vehicle1).get(1) instanceof ExitEvent);
     }
 }
