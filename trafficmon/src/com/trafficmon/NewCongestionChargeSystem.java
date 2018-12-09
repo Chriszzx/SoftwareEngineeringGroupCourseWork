@@ -1,6 +1,5 @@
 package com.trafficmon;
 
-import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -8,23 +7,28 @@ import java.util.Map;
 
 public class NewCongestionChargeSystem {
 
+    private Eventlog eventlog = new Eventlog();
+    private OperationAdaptor operationteam = new OperationAdaptor();
+    private CustomerAccountsAdaptor customerservice = new CustomerAccountsAdaptor();
     NewCongestionChargeFunctions functions = new NewCongestionChargeFunctions();
     Map<Vehicle, List<ZoneBoundaryCrossing>> crossingsByVehicle = new HashMap<Vehicle, List<ZoneBoundaryCrossing>>();
 
     public void vehicleEnteringZone(Vehicle vehicle) {
-        functions.eventLog.add(new EntryEvent(vehicle));
+        eventlog.getInstance().add(new EntryEvent(vehicle));
     }
 
     public void vehicleLeavingZone(Vehicle vehicle) {
         if (functions.previouslyRegistered(vehicle)) {
             return;
         }
-        functions.eventLog.add(new ExitEvent(vehicle));
+        eventlog.getInstance().add(new ExitEvent(vehicle));
     }
+
+
 
     public void newCalculateCharges() {
 
-        for (ZoneBoundaryCrossing crossing : functions.eventLog) {
+        for (ZoneBoundaryCrossing crossing : eventlog.getInstance()) {
             if (!crossingsByVehicle.containsKey(crossing.getVehicle())) {
                 crossingsByVehicle.put(crossing.getVehicle(), new ArrayList<ZoneBoundaryCrossing>());
             }
@@ -36,15 +40,15 @@ public class NewCongestionChargeSystem {
             List<ZoneBoundaryCrossing> crossings = vehicleCrossings.getValue();
 
             if (functions.checkOrderingOf(crossings)) {
-                OperationsTeam.getInstance().triggerInvestigationInto(vehicle);
+                operationteam.investigate(vehicle);
             } else {
-
-                BigDecimal charge = functions.newCalculateChargeForTimeInZone(crossings);
-
+                int charge = functions.newCalculateChargeForTimeInZone(crossings);
                 try {
-                    RegisteredCustomerAccountsService.getInstance().accountFor(vehicle).deduct(charge);
-                } catch (InsufficientCreditException | AccountNotRegisteredException ice) {
-                    OperationsTeam.getInstance().issuePenaltyNotice(vehicle, charge);
+                    customerservice.deductCharge(vehicle, charge);
+                }
+                catch (InsufficientCreditException | AccountNotRegisteredException ice)
+                {
+                    operationteam.penaltyNotice(vehicle,charge);
                 }
             }
         }
