@@ -1,12 +1,12 @@
 <component name="libraryTable">
   <library name="lib">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/trafficmon/lib/hamcrest-all-1.3.jar!/" />
-      <root url="jar://$PROJECT_DIR$/trafficmon/lib/joda-time-2.10.1.jar!/" />
-      <root url="jar://$PROJECT_DIR$/trafficmon/lib/trafficmon-externals.jar!/" />
-      <root url="jar://$PROJECT_DIR$/trafficmon/lib/jmock-junit4-2.8.1.jar!/" />
       <root url="jar://$PROJECT_DIR$/trafficmon/lib/junit-4.12.jar!/" />
+      <root url="jar://$PROJECT_DIR$/trafficmon/lib/trafficmon-externals.jar!/" />
+      <root url="jar://$PROJECT_DIR$/trafficmon/lib/joda-time-2.10.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/trafficmon/lib/hamcrest-all-1.3.jar!/" />
       <root url="jar://$PROJECT_DIR$/trafficmon/lib/jmock-2.8.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/trafficmon/lib/jmock-junit4-2.8.1.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

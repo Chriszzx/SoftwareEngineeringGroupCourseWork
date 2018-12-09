@@ -1,135 +1,166 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="436be252-4e54-4df2-af35-23fa76164343" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/dictionaries/50632.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/lib__2_.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/lib__3_.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/trafficmon/com/trafficmon/CongestionChargeFunctions.class" afterPath="$PROJECT_DIR$/out/production/trafficmon/com/trafficmon/CongestionChargeFunctions.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/trafficmon/com/trafficmon/CongestionChargeSystem.class" afterPath="$PROJECT_DIR$/out/production/trafficmon/com/trafficmon/CongestionChargeSystem.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/trafficmon/com/trafficmon/EntryEvent.class" afterPath="$PROJECT_DIR$/out/production/trafficmon/com/trafficmon/EntryEvent.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/trafficmon/com/trafficmon/ExitEvent.class" afterPath="$PROJECT_DIR$/out/production/trafficmon/com/trafficmon/ExitEvent.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/trafficmon/com/trafficmon/FakeTime.class" afterPath="$PROJECT_DIR$/out/production/trafficmon/com/trafficmon/FakeTime.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/trafficmon/com/trafficmon/NewCongestionChargeSystem.class" afterPath="$PROJECT_DIR$/out/production/trafficmon/com/trafficmon/NewCongestionChargeSystem.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/trafficmon/com/trafficmon/Vehicle.class" afterPath="$PROJECT_DIR$/out/production/trafficmon/com/trafficmon/Vehicle.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/trafficmon/com/trafficmon/ZoneBoundaryCrossing.class" afterPath="$PROJECT_DIR$/out/production/trafficmon/com/trafficmon/ZoneBoundaryCrossing.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/trafficmon/com/trafficmon/example.class" afterPath="$PROJECT_DIR$/out/production/trafficmon/com/trafficmon/example.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/test/trafficmon/com/trafficmon/CongestionChargeFunctionsTest.class" afterPath="$PROJECT_DIR$/out/test/trafficmon/com/trafficmon/CongestionChargeFunctionsTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/test/trafficmon/com/trafficmon/CongestionChargeSystemTest$1.class" afterPath="$PROJECT_DIR$/out/test/trafficmon/com/trafficmon/CongestionChargeSystemTest$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/test/trafficmon/com/trafficmon/CongestionChargeSystemTest.class" afterPath="$PROJECT_DIR$/out/test/trafficmon/com/trafficmon/CongestionChargeSystemTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/test/trafficmon/com/trafficmon/NewCongestionChargeSystemTest.class" afterPath="$PROJECT_DIR$/out/test/trafficmon/com/trafficmon/NewCongestionChargeSystemTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/test/trafficmon/test.iml" afterPath="$PROJECT_DIR$/out/test/trafficmon/test.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/trafficmon/test/test.iml" afterPath="$PROJECT_DIR$/trafficmon/test/test.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/trafficmon/trafficmon.iml" afterPath="$PROJECT_DIR$/trafficmon/trafficmon.iml" />
+    <list default="true" id="45a8115a-0578-4327-93a4-cd4780ecf068" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/lib.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trafficmon/src/com/trafficmon/CongestionChargeSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/trafficmon/src/com/trafficmon/CongestionChargeSystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trafficmon/src/com/trafficmon/NewCongestionChargeSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/trafficmon/src/com/trafficmon/NewCongestionChargeSystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trafficmon/src/com/trafficmon/example.java" beforeDir="false" afterPath="$PROJECT_DIR$/trafficmon/src/com/trafficmon/example.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trafficmon/test/com.trafficmon/CongestionChargeSystemTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/trafficmon/test/com.trafficmon/CongestionChargeSystemTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trafficmon/test/com.trafficmon/NewCongestionChargeSystemTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/trafficmon/test/com.trafficmon/NewCongestionChargeSystemTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trafficmon/trafficmon.iml" beforeDir="false" afterPath="$PROJECT_DIR$/trafficmon/trafficmon.iml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="983041705">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.3" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="java" value="10" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JAVA" value="10" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="232" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="232" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="CongestionChargeFunctionsTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/trafficmon/test/com.trafficmon/CongestionChargeFunctionsTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NewCongestionChargeSystemTest.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/trafficmon/test/com.trafficmon/NewCongestionChargeSystemTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CongestionChargeSystemTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/trafficmon/test/com.trafficmon/CongestionChargeSystemTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ZoneBoundaryCrossing.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/trafficmon/src/com/trafficmon/ZoneBoundaryCrossing.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CongestionChargeFunctions.java" pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/trafficmon/src/com/trafficmon/CongestionChargeFunctions.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-              <folding />
+            <state relative-caret-position="92">
+              <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CongestionChargeSystem.java" pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/trafficmon/test/com.trafficmon/CongestionChargeFunctionsTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="92">
+              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/trafficmon/test/com.trafficmon/CongestionChargeSystemTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="276">
+              <caret line="15" column="21" lean-forward="true" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/trafficmon/test/com.trafficmon/NewCongestionChargeFunctionsTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="92">
+              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/trafficmon/test/com.trafficmon/NewCongestionChargeSystemTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="253">
+              <caret line="14" column="5" lean-forward="true" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/trafficmon/src/com/trafficmon/CalculateCharges.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="450">
+              <caret line="67" column="17" lean-forward="true" selection-start-line="67" selection-start-column="17" selection-end-line="67" selection-end-column="17" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/trafficmon/src/com/trafficmon/CongestionChargeSystem.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-              <folding />
+            <state relative-caret-position="391">
+              <caret line="20" column="34" lean-forward="true" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EntryEvent.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/trafficmon/src/com/trafficmon/EntryEvent.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/trafficmon/src/com/trafficmon/NewCongestionChargeSystem.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-              <folding />
+            <state relative-caret-position="138">
+              <caret line="10" column="88" selection-start-line="10" selection-start-column="88" selection-end-line="10" selection-end-column="88" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="example.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/trafficmon/src/com/trafficmon/example.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/trafficmon/src/com/trafficmon/NewCongestionChargeFunctions.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-              <folding />
+            <state relative-caret-position="-327">
+              <caret line="22" column="26" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GradleLocalSettings">
-    <option name="externalProjectsViewState">
-      <projects_view />
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/trafficmon/src/com/trafficmon/PlanSwitcher.java" />
+        <option value="$PROJECT_DIR$/trafficmon/src/com/trafficmon/calculateCharge.java" />
+        <option value="$PROJECT_DIR$/trafficmon/src/com/trafficmon/calculateCharges.java" />
+        <option value="$PROJECT_DIR$/trafficmon/src/com/trafficmon/example.java" />
+        <option value="$PROJECT_DIR$/trafficmon/test/com.trafficmon/CongestionChargeSystemTest.java" />
+        <option value="$PROJECT_DIR$/trafficmon/test/com.trafficmon/NewCongestionChargeSystemTest.java" />
+        <option value="$PROJECT_DIR$/trafficmon/src/com/trafficmon/NewCongestionChargeSystem.java" />
+        <option value="$PROJECT_DIR$/trafficmon/src/com/trafficmon/CalculateCharges.java" />
+        <option value="$PROJECT_DIR$/trafficmon/src/com/trafficmon/CongestionChargeSystem.java" />
+      </list>
     </option>
-  </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="725" />
@@ -137,30 +168,39 @@
     <option name="width" value="993" />
     <option name="height" value="837" />
   </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>Android</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
-      <flattenPackages />
-      <showMembers />
-      <showModules />
-      <showLibraryContents />
-      <hideEmptyPackages />
-      <abbreviatePackageNames />
-      <autoscrollToSource />
-      <autoscrollFromSource />
-      <sortByType />
-      <manualOrder />
+    <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="SoftwareEngineeringGroupCourseWork" type="b2602c69:ProjectViewProjectNode" />
               <item name="trafficmon" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SoftwareEngineeringGroupCourseWork" type="b2602c69:ProjectViewProjectNode" />
+              <item name="trafficmon" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SoftwareEngineeringGroupCourseWork" type="b2602c69:ProjectViewProjectNode" />
@@ -193,9 +233,8 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544362137509" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -209,15 +248,47 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+  <component name="RunManager" selected="JUnit.CongestionChargeFunctionsTest">
+    <configuration name="CongestionChargeFunctionsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="trafficmon" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.trafficmon.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.trafficmon" />
+      <option name="MAIN_CLASS_NAME" value="com.trafficmon.CongestionChargeFunctionsTest" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="Application" factoryName="Application">
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    <configuration name="CongestionChargeSystemTest.MapTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="trafficmon" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.trafficmon.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.trafficmon" />
+      <option name="MAIN_CLASS_NAME" value="com.trafficmon.CongestionChargeSystemTest" />
+      <option name="METHOD_NAME" value="MapTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NewCongestionChargeFunctionsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="trafficmon" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.trafficmon.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.trafficmon" />
+      <option name="MAIN_CLASS_NAME" value="com.trafficmon.NewCongestionChargeFunctionsTest" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -232,13 +303,22 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.trafficmon" />
       <option name="MAIN_CLASS_NAME" value="com.trafficmon.NewCongestionChargeSystemTest" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="JUnit" factoryName="JUnit">
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+    <configuration name="NewCongestionChargeSystemTest.MapTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="trafficmon" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.trafficmon.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.trafficmon" />
+      <option name="MAIN_CLASS_NAME" value="com.trafficmon.NewCongestionChargeSystemTest" />
+      <option name="METHOD_NAME" value="MapTest" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -256,153 +336,190 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="TestNG" factoryName="TestNG">
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
-      <module name="" />
-      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
+      <module name="test" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
-      <predefined_log_file id="idea.log" enabled="true" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="JUnit.NewCongestionChargeSystemTest.MapTest" />
+      <item itemvalue="JUnit.CongestionChargeSystemTest.MapTest" />
+      <item itemvalue="JUnit.NewCongestionChargeFunctionsTest" />
+      <item itemvalue="JUnit.NewCongestionChargeSystemTest" />
+      <item itemvalue="JUnit.CongestionChargeFunctionsTest" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CongestionChargeFunctionsTest" />
         <item itemvalue="JUnit.NewCongestionChargeSystemTest" />
+        <item itemvalue="JUnit.NewCongestionChargeFunctionsTest" />
+        <item itemvalue="JUnit.CongestionChargeSystemTest.MapTest" />
+        <item itemvalue="JUnit.NewCongestionChargeSystemTest.MapTest" />
       </list>
     </recent_temporary>
   </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="436be252-4e54-4df2-af35-23fa76164343" name="Default" comment="" />
-      <created>1544283022964</created>
+      <changelist id="45a8115a-0578-4327-93a4-cd4780ecf068" name="Default Changelist" comment="" />
+      <created>1544356668568</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1544283022964</updated>
-      <workItem from="1544283024334" duration="61000" />
+      <updated>1544356668568</updated>
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="NewCongestionChargeSystemTest - 2018.12.08 at 15h 31m 08s.xml">
+    <history-entry file="CongestionChargeSystemTest_MapTest - 2018.12.09 at 12h 19m 13s.xml">
+      <configuration name="CongestionChargeSystemTest.MapTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="NewCongestionChargeFunctionsTest - 2018.12.09 at 12h 19m 48s.xml">
+      <configuration name="NewCongestionChargeFunctionsTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="NewCongestionChargeSystemTest - 2018.12.09 at 12h 19m 55s.xml">
       <configuration name="NewCongestionChargeSystemTest" configurationId="JUnit" />
     </history-entry>
-  </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61000" />
+    <history-entry file="CongestionChargeFunctionsTest - 2018.12.09 at 12h 19m 59s.xml">
+      <configuration name="CongestionChargeFunctionsTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1426" height="824" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32978722" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24964938" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" />
+      <window_info id="Designer" />
+      <window_info id="UI Designer" />
+      <window_info id="Capture Tool" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" weight="0.329718" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.329718" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Palette" />
+      <window_info anchor="right" id="Theme Preview" />
+      <window_info anchor="right" id="Capture Analysis" />
+      <window_info anchor="right" id="Palette&#9;" />
+      <window_info anchor="right" id="Maven Projects" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager />
-    <watches-manager />
-  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/trafficmon/src/com/trafficmon/ZoneBoundaryCrossing.java">
+    <entry file="file://$PROJECT_DIR$/trafficmon/src/com/trafficmon/NewCongestionChargeFunctions.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/trafficmon/src/com/trafficmon/CongestionChargeSystem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/trafficmon/src/com/trafficmon/EntryEvent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
+        <state relative-caret-position="-327">
+          <caret line="22" column="26" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/trafficmon/src/com/trafficmon/example.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/trafficmon/src/com/trafficmon/CongestionChargeFunctions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding />
+        <state relative-caret-position="336">
+          <caret line="16" column="22" lean-forward="true" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/trafficmon/test/com.trafficmon/CongestionChargeFunctionsTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding />
+        <state relative-caret-position="92">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/trafficmon/src/com/trafficmon/NewCongestionChargeSystem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="10" column="88" selection-start-line="10" selection-start-column="88" selection-end-line="10" selection-end-column="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/trafficmon/src/com/trafficmon/CongestionChargeFunctions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/trafficmon/test/com.trafficmon/CongestionChargeSystemTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
+        <state relative-caret-position="276">
+          <caret line="15" column="21" lean-forward="true" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/trafficmon/test/com.trafficmon/NewCongestionChargeFunctionsTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/trafficmon/test/com.trafficmon/NewCongestionChargeSystemTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding />
+        <state relative-caret-position="253">
+          <caret line="14" column="5" lean-forward="true" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/trafficmon/src/com/trafficmon/CalculateCharges.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="67" column="17" lean-forward="true" selection-start-line="67" selection-start-column="17" selection-end-line="67" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/trafficmon/src/com/trafficmon/CongestionChargeSystem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="20" column="34" lean-forward="true" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
         </state>
       </provider>
     </entry>
@@ -411,7 +528,7 @@
     <states>
       <state key="ProjectJDKs.UI">
         <settings>
-          <last-edited>9</last-edited>
+          <last-edited>10</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

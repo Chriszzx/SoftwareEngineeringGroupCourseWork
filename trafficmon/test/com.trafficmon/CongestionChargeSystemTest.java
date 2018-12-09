@@ -19,7 +19,7 @@ public class CongestionChargeSystemTest {
             }
         };
         congestionChargeSystem.vehicleEnteringZone(vehicle);
-        assertThat(functions.eventLog.get(0) instanceof EntryEvent,is(true));
+        assertThat(CongestionChargeFunctions.eventLog.get(0) instanceof EntryEvent,is(true));
     }
 
     @Test
@@ -30,6 +30,7 @@ public class CongestionChargeSystemTest {
         Vehicle vehicle3 = Vehicle.withRegistration("CC");
 
         CongestionChargeSystem system = new CongestionChargeSystem();
+        CalculateCharges calculateCharges = new CalculateCharges();
         system.vehicleEnteringZone(vehicle1);
         system.vehicleEnteringZone(vehicle2);
         system.vehicleEnteringZone(vehicle3);
@@ -37,9 +38,9 @@ public class CongestionChargeSystemTest {
         system.vehicleLeavingZone(vehicle2);
         system.vehicleLeavingZone(vehicle3);
 
-        system.calculateCharges();
+        calculateCharges.calculateCharges();
 
-        assertTrue(system.crossingsByVehicle.get(vehicle1).get(0) instanceof EntryEvent);
-        assertTrue(system.crossingsByVehicle.get(vehicle1).get(1) instanceof ExitEvent);
+        assertTrue(calculateCharges.crossingsByVehicle.get(vehicle1).get(0) instanceof EntryEvent);
+        assertTrue(calculateCharges.crossingsByVehicle.get(vehicle1).get(1) instanceof ExitEvent);
     }
 }
