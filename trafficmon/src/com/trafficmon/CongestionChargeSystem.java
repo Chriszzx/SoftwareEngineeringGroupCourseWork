@@ -3,25 +3,25 @@ package com.trafficmon;
 import java.math.BigDecimal;
 import java.util.*;
 
-public class CongestionChargeSystem {
+class CongestionChargeSystem {
 
     private CongestionChargeFunctions functions = new CongestionChargeFunctions();
     Map<Vehicle, List<ZoneBoundaryCrossing>> crossingsByVehicle = new HashMap<Vehicle, List<ZoneBoundaryCrossing>>();
 
-    public void vehicleEnteringZone(Vehicle vehicle) {
-        functions.eventLog.add(new EntryEvent(vehicle));
+    void vehicleEnteringZone(Vehicle vehicle) {
+        CongestionChargeFunctions.eventLog.add(new EntryEvent(vehicle));
     }
 
-    public void vehicleLeavingZone(Vehicle vehicle) {
+    void vehicleLeavingZone(Vehicle vehicle) {
         if (functions.previouslyRegistered(vehicle)) {
             return;
         }
-        functions.eventLog.add(new ExitEvent(vehicle));
+        CongestionChargeFunctions.eventLog.add(new ExitEvent(vehicle));
     }
 
-    public void calculateCharges() {
+    void calculateCharges() {
 
-        for (ZoneBoundaryCrossing crossing : functions.eventLog) {
+        for (ZoneBoundaryCrossing crossing : CongestionChargeFunctions.eventLog) {
             if (!crossingsByVehicle.containsKey(crossing.getVehicle())) {
                 crossingsByVehicle.put(crossing.getVehicle(), new ArrayList<ZoneBoundaryCrossing>());
             }
@@ -47,4 +47,3 @@ public class CongestionChargeSystem {
         }
     }
 }
-
