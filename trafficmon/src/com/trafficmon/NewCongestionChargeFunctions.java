@@ -1,18 +1,18 @@
 package com.trafficmon;
 
-import java.math.BigDecimal;
+
 import java.util.ArrayList;
 import java.util.List;
 
 class NewCongestionChargeFunctions {
 
-    static final List<ZoneBoundaryCrossing> eventLog = new ArrayList<>();
+    private Eventlog eventlog = new Eventlog();
 
     int newMinutesBetween(long startTime, long endTime) {
         return (int) Math.ceil((endTime - startTime));
     }
     boolean previouslyRegistered(Vehicle vehicle) {
-        for (ZoneBoundaryCrossing crossing : eventLog) {
+        for (ZoneBoundaryCrossing crossing : eventlog.getInstance()) {
             if (crossing.getVehicle().equals(vehicle)) {
                 return false;
             }
@@ -40,13 +40,13 @@ class NewCongestionChargeFunctions {
         return false;
     }
 
-    BigDecimal newCalculateChargeForTimeInZone(List<ZoneBoundaryCrossing> crossings) {
-        BigDecimal charge = new BigDecimal(0);
+    int newCalculateChargeForTimeInZone(List<ZoneBoundaryCrossing> crossings) {
+        int charge = 0;
 
         int time = 0;
-        BigDecimal beforeTwoPM = new BigDecimal(6);
-        BigDecimal afterTwoPM = new BigDecimal(4);
-        BigDecimal moreThanFourHours = new BigDecimal(12);
+        int beforeTwoPM = 6;
+        int afterTwoPM = 4;
+        int moreThanFourHours = 12;
 
         ZoneBoundaryCrossing lastEvent = crossings.get(0);
         long xlastEvent = lastEvent.timestamp();
@@ -59,13 +59,13 @@ class NewCongestionChargeFunctions {
             lastEvent = crossing;
         }
         if (time > 240) {
-            charge = charge.add(moreThanFourHours);
+            charge = charge+moreThanFourHours;
         }
         if (time <= 240 ) {
             if (xlastEvent < 840) {
-                charge = charge.add(beforeTwoPM);
+                charge = charge+beforeTwoPM;
             } else {
-                charge = charge.add(afterTwoPM);
+                charge = charge+afterTwoPM;
             }
         }
         return charge;
