@@ -1,10 +1,17 @@
 package com.trafficmon;
 
+import com.trafficmon.EntryEvent;
+import com.trafficmon.ExitEvent;
+import com.trafficmon.Vehicle;
+import com.trafficmon.ZoneBoundaryCrossing;
+
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
 class CongestionChargeFunctions {
+
+
 
     private static final BigDecimal CHARGE_RATE_POUNDS_PER_MINUTE = new BigDecimal(0.05);
 

@@ -5,8 +5,8 @@ import org.joda.time.LocalTime;
 public class FakeTime {
 
     private static LocalTime localtime=new LocalTime();
-    private static int currentTime=localtime.getHourOfDay()*60+localtime.getMinuteOfHour();
-    private static int offset;
+    private static long currentTime=localtime.getHourOfDay()*60+localtime.getMinuteOfHour();;
+    private static long offset;
 
     public void FakeTime()
     {
@@ -15,10 +15,10 @@ public class FakeTime {
 
     public void delayhours(int hour)
     {
-        offset=hour*60;
+        offset+=hour*60;
     }
 
-    public int getTime()
+    public long getTime()
     {
         return currentTime+offset;
     }
