@@ -2,6 +2,11 @@ package com.trafficmon;
 
 import org.joda.time.LocalTime;
 
+/*
+    This class stores real world time from which the zoneboundarycrossing class read, it aslo provides methods to generate a fake time for
+    testing to simulate any scenario.
+ */
+
 public class FakeTime {
 
     private static LocalTime localtime=new LocalTime();

@@ -9,6 +9,11 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
+
+/*
+    This class contains all old private methods in system. We made these methods package private in order to test these methods.
+ */
+
 class CongestionChargeFunctions {
 
 

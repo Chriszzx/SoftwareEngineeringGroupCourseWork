@@ -5,6 +5,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/*
+    New system.
+ */
+
 public class NewCongestionChargeSystem {
 
     private Eventlog eventlog = new Eventlog();

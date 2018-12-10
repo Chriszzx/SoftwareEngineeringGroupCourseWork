@@ -1,6 +1,10 @@
 package com.trafficmon;
 
 
+/*
+    this is the class where stores new charging standard
+ */
+
 class Specification {
 
     int Current(long first, long time){

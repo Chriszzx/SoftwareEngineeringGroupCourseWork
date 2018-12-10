@@ -9,6 +9,12 @@ import com.trafficmon.ZoneBoundaryCrossing;
 import java.math.BigDecimal;
 import java.util.*;
 
+
+/*
+    This is the old system, we edit some features to test functionality.
+ */
+
+
 class CongestionChargeSystem {
 
     private CongestionChargeFunctions functions = new CongestionChargeFunctions();

@@ -4,6 +4,11 @@ package com.trafficmon;
 import java.util.ArrayList;
 import java.util.List;
 
+
+/*
+    New functions in new charge systems.
+ */
+
 class NewCongestionChargeFunctions {
 
     private Eventlog eventlog = new Eventlog();

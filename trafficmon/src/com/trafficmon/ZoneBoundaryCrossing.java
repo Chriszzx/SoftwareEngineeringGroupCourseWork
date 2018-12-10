@@ -1,5 +1,9 @@
 package com.trafficmon;
 
+/*
+    Boundary-crossing event class.
+ */
+
 public class ZoneBoundaryCrossing {
 
     private final Vehicle vehicle;

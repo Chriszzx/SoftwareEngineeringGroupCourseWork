@@ -3,6 +3,10 @@ package com.trafficmon;
 import javax.naming.InsufficientResourcesException;
 import java.math.BigDecimal;
 
+/*
+    This is adaptor class for handling payment and customer accounts issues which supplied by third-party library.
+ */
+
 public class CustomerAccountsAdaptor implements CustomerAccountsService {
 
     @Override

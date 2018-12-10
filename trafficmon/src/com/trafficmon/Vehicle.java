@@ -1,5 +1,9 @@
 package com.trafficmon;
 
+/*
+    Vehicle class
+ */
+
 public class Vehicle {
 
     private final String registration;
