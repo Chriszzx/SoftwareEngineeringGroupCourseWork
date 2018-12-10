@@ -11,50 +11,63 @@ public class NewCongestionChargeFunctionsTest {
     private NewCongestionChargeFunctions functions = new NewCongestionChargeFunctions();
     private FakeTime fakeTime = new FakeTime();
     private Vehicle vehicle = Vehicle.withRegistration("A123 XYZ");
-
+    private Eventlog eventlog = new Eventlog();
     @Test
     public void newMinutesBetweenTest(){
         long startTime = 12;
         long endTime = 18;
-        assertThat(functions.newMinutesBetween(startTime,endTime),is (6));
+        assertThat((int)functions.newMinutesBetween(startTime,endTime),is (6));
     }
 
     @Test
+    public void totalTimeTest(){
+        eventlog.getInstance().clear();
+        fakeTime.setTime(10, 0);
+        newCongestionChargeSystem.vehicleEnteringZone(vehicle);
+        fakeTime.delayhours(1);
+        newCongestionChargeSystem.vehicleLeavingZone(vehicle);
+        long match = 60;
+        assertThat(functions.totalTime(eventlog.getInstance()),is(match));
+        fakeTime.resetTime();
+    }
+
+
+    @Test
     public void vehicleEnterAndLeaveBeforeTwoPm() {
-        NewCongestionChargeFunctions.eventLog.clear();
+        eventlog.getInstance().clear();
         fakeTime.setTime(8,0);
         newCongestionChargeSystem.vehicleEnteringZone(vehicle);
         fakeTime.delayhours(2);
         newCongestionChargeSystem.vehicleLeavingZone(vehicle);
-        assertThat(functions.newCalculateChargeForTimeInZone(NewCongestionChargeFunctions.eventLog), is(new BigDecimal(6)));
+        assertThat((int)functions.newCalculateChargeForTimeInZone(eventlog.getInstance()), is(6));
         fakeTime.resetTime();
     }
 
     @Test
     public void vehicleEnterAndLeaveAfterTwoPm() {
-        NewCongestionChargeFunctions.eventLog.clear();
+        eventlog.getInstance().clear();
         fakeTime.setTime(15, 0);
         newCongestionChargeSystem.vehicleEnteringZone(vehicle);
         fakeTime.delayhours(2);
         newCongestionChargeSystem.vehicleLeavingZone(vehicle);
-        assertThat(functions.newCalculateChargeForTimeInZone(NewCongestionChargeFunctions.eventLog), is(new BigDecimal(4)));
+        assertThat((int)functions.newCalculateChargeForTimeInZone(eventlog.getInstance()), is(4));
         fakeTime.resetTime();
     }
 
     @Test
     public void vehicleStayInsideZoneMoreThanFourHoursCase1() {
-        NewCongestionChargeFunctions.eventLog.clear();
+        eventlog.getInstance().clear();
         fakeTime.setTime(14, 0);
         newCongestionChargeSystem.vehicleEnteringZone(vehicle);
         fakeTime.delayhours(5);
         newCongestionChargeSystem.vehicleLeavingZone(vehicle);
-        assertThat(functions.newCalculateChargeForTimeInZone(NewCongestionChargeFunctions.eventLog), is(new BigDecimal(12)));
+        assertThat((int)functions.newCalculateChargeForTimeInZone(eventlog.getInstance()), is(12));
         fakeTime.resetTime();
     }
 
     @Test
     public void vehicleStayInsideZoneMoreThanFourHoursCase2(){
-        NewCongestionChargeFunctions.eventLog.clear();
+        eventlog.getInstance().clear();
         fakeTime.setTime(10, 0);
         newCongestionChargeSystem.vehicleEnteringZone(vehicle);
         fakeTime.delayhours(1);
@@ -63,7 +76,7 @@ public class NewCongestionChargeFunctionsTest {
         newCongestionChargeSystem.vehicleEnteringZone(vehicle);
         fakeTime.delayhours(1);
         newCongestionChargeSystem.vehicleLeavingZone(vehicle);
-        assertThat(functions.newCalculateChargeForTimeInZone(NewCongestionChargeFunctions.eventLog),is(new BigDecimal(6)));
+        assertThat((int)functions.newCalculateChargeForTimeInZone(eventlog.getInstance()),is(6));
         fakeTime.resetTime();
     }
 }

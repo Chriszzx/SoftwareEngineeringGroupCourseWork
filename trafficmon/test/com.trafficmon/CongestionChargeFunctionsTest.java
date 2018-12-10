@@ -1,5 +1,7 @@
 package com.trafficmon;
 
+import com.trafficmon.CongestionChargeFunctions;
+import com.trafficmon.CongestionChargeSystem;
 import org.junit.Test;
 
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -22,10 +24,10 @@ public class CongestionChargeFunctionsTest {
         CongestionChargeSystem congestionChargeSystem = new CongestionChargeSystem();
         Vehicle vehicle = Vehicle.withRegistration("A123 XYZ");
         Vehicle vehicle1 = Vehicle.withRegistration("XXX XXX");
-        ZoneBoundaryCrossing zoneBoundaryCrossing = new ZoneBoundaryCrossing(vehicle);
+        ZoneBoundaryCrossing zoneBoundaryCrossing = new ZoneBoundaryCrossing(vehicle1);
         congestionChargeSystem.vehicleEnteringZone(vehicle);
-        assertEquals(zoneBoundaryCrossing.getVehicle(), vehicle);
-        assertNotEquals(zoneBoundaryCrossing.getVehicle(), vehicle1);
+        assertEquals(zoneBoundaryCrossing.getVehicle(), vehicle1);
+        assertNotEquals(zoneBoundaryCrossing.getVehicle(), vehicle);
     }
 
 }

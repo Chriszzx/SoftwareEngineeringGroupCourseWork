@@ -1,5 +1,10 @@
 package com.trafficmon;
 
+import com.trafficmon.*;
+import com.trafficmon.EntryEvent;
+import com.trafficmon.ExitEvent;
+import com.trafficmon.Vehicle;
+import com.trafficmon.ZoneBoundaryCrossing;
 import org.junit.Test;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
@@ -19,7 +24,7 @@ public class CongestionChargeSystemTest {
             }
         };
         congestionChargeSystem.vehicleEnteringZone(vehicle);
-        assertThat(CongestionChargeFunctions.eventLog.get(0) instanceof EntryEvent,is(true));
+        assertThat(functions.eventLog.get(0) instanceof EntryEvent,is(true));
     }
 
     @Test
@@ -30,7 +35,6 @@ public class CongestionChargeSystemTest {
         Vehicle vehicle3 = Vehicle.withRegistration("CC");
 
         CongestionChargeSystem system = new CongestionChargeSystem();
-        CalculateCharges calculateCharges = new CalculateCharges();
         system.vehicleEnteringZone(vehicle1);
         system.vehicleEnteringZone(vehicle2);
         system.vehicleEnteringZone(vehicle3);
@@ -38,9 +42,9 @@ public class CongestionChargeSystemTest {
         system.vehicleLeavingZone(vehicle2);
         system.vehicleLeavingZone(vehicle3);
 
-        calculateCharges.calculateCharges();
+        system.calculateCharges();
 
-        assertTrue(calculateCharges.crossingsByVehicle.get(vehicle1).get(0) instanceof EntryEvent);
-        assertTrue(calculateCharges.crossingsByVehicle.get(vehicle1).get(1) instanceof ExitEvent);
+        assertTrue(system.crossingsByVehicle.get(vehicle1).get(0) instanceof EntryEvent);
+        assertTrue(system.crossingsByVehicle.get(vehicle1).get(1) instanceof ExitEvent);
     }
 }
