@@ -10,6 +10,10 @@ import org.joda.time.LocalTime;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
+/*
+    Test functionality of ZoneBoundaryCrossing class.
+*/
+
 public class ZoneBoundaryCrossingTest {
 
     LocalTime local = new LocalTime();

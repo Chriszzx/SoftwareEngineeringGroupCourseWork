@@ -7,6 +7,10 @@ import org.joda.time.LocalTime;
 
 import static org.junit.Assert.assertEquals;
 
+/*
+    Test functionality of FakeTime class.
+ */
+
 public class TimeTest {
     FakeTime faketime = new FakeTime();
     LocalTime local = new LocalTime();

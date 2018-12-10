@@ -5,6 +5,10 @@ import java.math.BigDecimal;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
 
+/*
+    Test functionality of new charging system functions.
+*/
+
 public class NewCongestionChargeFunctionsTest {
 
     private NewCongestionChargeSystem newCongestionChargeSystem = new NewCongestionChargeSystem();

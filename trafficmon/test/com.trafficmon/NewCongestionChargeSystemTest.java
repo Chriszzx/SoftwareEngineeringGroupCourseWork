@@ -5,6 +5,10 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertTrue;
 
+/*
+    Test functionality of new charging system.
+*/
+
 public class NewCongestionChargeSystemTest{
     private Eventlog eventlog = new Eventlog();
 

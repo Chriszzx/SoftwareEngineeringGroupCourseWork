@@ -10,6 +10,10 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertTrue;
 
+/*
+    Test functionality of old charging system.
+*/
+
 public class CongestionChargeSystemTest {
 
     @Test
