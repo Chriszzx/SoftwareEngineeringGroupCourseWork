@@ -12,8 +12,8 @@ import java.util.Map;
 public class NewCongestionChargeSystem {
 
     private Eventlog eventlog = new Eventlog();
-    private OperationAdaptor operationteam = new OperationAdaptor();
-    private CustomerAccountsAdaptor customerservice = new CustomerAccountsAdaptor();
+    OperationService operationteam = new OperationAdaptor();
+    CustomerAccountsService customerservice = new CustomerAccountsAdaptor();
     private NewCongestionChargeFunctions functions = new NewCongestionChargeFunctions();
     Map<Vehicle, List<ZoneBoundaryCrossing>> crossingsByVehicle = new HashMap<Vehicle, List<ZoneBoundaryCrossing>>();
 
