@@ -6,11 +6,10 @@ import java.util.List;
 /*
     Singleton Class for eventlog where stores all boundary-crossing events.
  */
+ class Eventlog {
+    private static final List<ZoneBoundaryCrossing> eventLog = new ArrayList<>();
 
-public class Eventlog {
-    static final List<ZoneBoundaryCrossing> eventLog = new ArrayList<>();
-
-    public List<ZoneBoundaryCrossing> getInstance()
+    List<ZoneBoundaryCrossing> getInstance()
     {
         return eventLog;
     }

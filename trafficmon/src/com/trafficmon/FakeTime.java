@@ -18,22 +18,22 @@ public class FakeTime {
         offset=0;
     }
 
-    public void delayhours(int hour)
+    void delayhours(int hour)
     {
         offset+=hour*60;
     }
 
-    public long getTime()
+    long getTime()
     {
         return currentTime+offset;
     }
 
-    public void setTime(int hour, int minute)
+    void setTime(int hour, int minute)
     {
         currentTime=hour*60+minute;
     }
 
-    public void resetTime()
+    void resetTime()
     {
         currentTime=localtime.getHourOfDay()*60+localtime.getMinuteOfHour();
         offset=0;

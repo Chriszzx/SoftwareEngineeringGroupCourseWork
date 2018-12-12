@@ -15,9 +15,8 @@ public class OperationAdaptor implements OperationService {
     }
 
     @Override
-    public void penaltyNotice(Vehicle vehicle, long charge)
+    public void penaltyNotice(Vehicle vehicle, BigDecimal charge)
     {
-        BigDecimal total = new BigDecimal(charge);
-        OperationsTeam.getInstance().issuePenaltyNotice(vehicle,total);
+        OperationsTeam.getInstance().issuePenaltyNotice(vehicle,charge);
     }
 }

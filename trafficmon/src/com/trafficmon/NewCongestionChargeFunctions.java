@@ -1,6 +1,7 @@
 package com.trafficmon;
 
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,10 +21,21 @@ class NewCongestionChargeFunctions {
     boolean previouslyRegistered(Vehicle vehicle) {
         for (ZoneBoundaryCrossing crossing : eventlog.getInstance()) {
             if (crossing.getVehicle().equals(vehicle)) {
-                return false;
+                return true;
             }
         }
-        return true;
+        return false;
+    }
+
+    void vehicleEnteringZone(Vehicle vehicle) {
+        eventlog.getInstance().add(new EntryEvent(vehicle));
+    }
+
+    void vehicleLeavingZone(Vehicle vehicle) {
+        if (!previouslyRegistered(vehicle)) {
+            return;
+        }
+        eventlog.getInstance().add(new ExitEvent(vehicle));
     }
 
     boolean checkOrderingOf(List<ZoneBoundaryCrossing> crossings) {
@@ -49,7 +61,6 @@ class NewCongestionChargeFunctions {
     long totalTime(List<ZoneBoundaryCrossing> crossings){
         long time = 0;
         ZoneBoundaryCrossing lastEvent = crossings.get(0);
-        long timeLastEvent = lastEvent.timestamp();
         for (ZoneBoundaryCrossing crossing : crossings.subList(1, crossings.size())) {
 
             if (crossing instanceof ExitEvent) {
@@ -60,14 +71,12 @@ class NewCongestionChargeFunctions {
         return time;
     }
 
+    BigDecimal newCalculateChargeForTimeInZone(List<ZoneBoundaryCrossing> crossings) {
 
-    long newCalculateChargeForTimeInZone(List<ZoneBoundaryCrossing> crossings) {
-
-        Specification CurrentStandard = new Specification();
-        long time = totalTime(crossings);
+        ChargingStandard CurrentStandard = new NewStandard();
+        long time = CurrentStandard.totalTime(crossings);
         ZoneBoundaryCrossing lastEvent = crossings.get(0);
         long first = lastEvent.timestamp();
-        return CurrentStandard.Current(first,time);
-
+        return CurrentStandard.CalculateCharge(first,time);
     }
 }

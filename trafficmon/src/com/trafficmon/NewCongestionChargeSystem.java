@@ -1,5 +1,6 @@
 package com.trafficmon;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -17,16 +18,7 @@ public class NewCongestionChargeSystem {
     private NewCongestionChargeFunctions functions = new NewCongestionChargeFunctions();
     Map<Vehicle, List<ZoneBoundaryCrossing>> crossingsByVehicle = new HashMap<Vehicle, List<ZoneBoundaryCrossing>>();
 
-    public void vehicleEnteringZone(Vehicle vehicle) {
-        eventlog.getInstance().add(new EntryEvent(vehicle));
-    }
 
-    public void vehicleLeavingZone(Vehicle vehicle) {
-        if (functions.previouslyRegistered(vehicle)) {
-            return;
-        }
-        eventlog.getInstance().add(new ExitEvent(vehicle));
-    }
 
     public void addEventtoMap()
     {
@@ -40,6 +32,7 @@ public class NewCongestionChargeSystem {
 
     public void newCalculateCharges() {
         addEventtoMap();
+
         for (Map.Entry<Vehicle, List<ZoneBoundaryCrossing>> vehicleCrossings : crossingsByVehicle.entrySet()) {
             Vehicle vehicle = vehicleCrossings.getKey();
             List<ZoneBoundaryCrossing> crossings = vehicleCrossings.getValue();
@@ -47,7 +40,7 @@ public class NewCongestionChargeSystem {
             if (functions.checkOrderingOf(crossings)) {
                 operationteam.investigate(vehicle);
             } else {
-                long charge = functions.newCalculateChargeForTimeInZone(crossings);
+                BigDecimal charge = functions.newCalculateChargeForTimeInZone(crossings);
                 try {
                     customerservice.deductCharge(vehicle, charge);
                 }
